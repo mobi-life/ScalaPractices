@@ -9,4 +9,6 @@ object PassByNameWorksheet {;import org.scalaide.worksheet.runtime.library.Works
   
   var counter=0;System.out.println("""counter  : Int = """ + $show(counter ));$skip(52); 
   myWhile(counter<5)({counter+=1;println(counter)})}
+                                                  
+  
 }

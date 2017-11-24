@@ -103,9 +103,10 @@ object CollectionsWorksheet2 {;import org.scalaide.worksheet.runtime.library.Wor
   nums.minBy(n => n*(-1));System.out.println("""res46: Int = """ + $show(res$46));$skip(24); val res$47 = 
   words.sortBy(s=>s(1));System.out.println("""res47: List[String] = """ + $show(res$47));$skip(32); val res$48 = 
   nums.sortWith((n1,n2)=>n1>n2);System.out.println("""res48: List[Int] = """ + $show(res$48));$skip(32); val res$49 = 
-  nums.sortWith((n1,n2)=>n1<n2);System.out.println("""res49: List[Int] = """ + $show(res$49))}
+  nums.sortWith((n1,n2)=>n1<n2);System.out.println("""res49: List[Int] = """ + $show(res$49));$skip(40); 
   
-  
+  val list = List(82,42,14,15,65,96);System.out.println("""list  : List[Int] = """ + $show(list ));$skip(29); val res$50 = 
+  list.foldLeft(-1)(_ max _);System.out.println("""res50: Int = """ + $show(res$50))}
   
   
   

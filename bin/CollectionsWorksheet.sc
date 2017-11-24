@@ -1,14 +1,13 @@
-object CollectionsWorksheet2 {
+object CollectionsWorksheet {
   def myRandom(start:Int,end:Int):Int = ((Math.random*end)%start).toInt
                                                   //> myRandom: (start: Int, end: Int)Int
   
-  val col1 = Array.fill(10)(myRandom(5,10))       //> col1  : Array[Int] = Array(3, 2, 3, 3, 2, 1, 1, 2, 4, 2)
+  val col1 = Array.fill(10)(myRandom(5,10))       //> col1  : Array[Int] = Array(3, 4, 4, 2, 2, 3, 2, 2, 3, 4)
 	val col2 = Array.fill(5)(Array
 														.fill(myRandom(5,10))(myRandom(65,122))
 														.map(p=>p.toChar)
 														.mkString)
-                                                  //> col2  : Array[String] = Array("", " 
-                                                  //| ", , 3, "")
+                                                  //> col2  : Array[String] = Array(%., "", "", "", $)
 														
 	var tabulatedCol = Array.tabulate(10)(i => i+1)
                                                   //> tabulatedCol  : Array[Int] = Array(1, 2, 3, 4, 5, 6, 7, 8, 9, 10)
@@ -128,7 +127,8 @@ object CollectionsWorksheet2 {
   nums.sortWith((n1,n2)=>n1>n2)                   //> res48: List[Int] = List(24, 8, 7, 6, 5, 3)
   nums.sortWith((n1,n2)=>n1<n2)                   //> res49: List[Int] = List(3, 5, 6, 7, 8, 24)
   
-  
+  val list = List(82,42,14,15,65,96)              //> list  : List[Int] = List(82, 42, 14, 15, 65, 96)
+  list.foldLeft(-1)(_ max _)                      //> res50: Int = 96
   
   
   
